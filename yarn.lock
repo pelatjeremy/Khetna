@@ -491,10 +491,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tradeai/api@workspace:apps/api"
   dependencies:
-    "@tradeai/database": "workspace:*"
+    "@tradeai/core": "workspace:*"
     cors: "npm:^2.8.5"
     dotenv: "npm:^17.0.1"
     express: "npm:^5.1.0"
+  languageName: unknown
+  linkType: soft
+
+"@tradeai/core@workspace:*, @tradeai/core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@tradeai/core@workspace:packages/core"
+  dependencies:
+    "@tradeai/database": "workspace:*"
   languageName: unknown
   linkType: soft
 

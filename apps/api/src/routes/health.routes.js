@@ -1,13 +1,8 @@
 import { Router } from 'express';
+import { getHealth } from '../controllers/health.controller.js';
 
 const router = Router();
 
-router.get('/', (_request, response) => {
-  response.status(200).json({
-    status: 'ok',
-    service: 'tradeai-api',
-    timestamp: new Date().toISOString(),
-  });
-});
+router.get('/', getHealth);
 
 export default router;
