@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@tradeai/database": "workspace:*"
+    "@tradeai/database": "workspace:*",
+    "technicalindicators": "^3.1.0"
   }
 }

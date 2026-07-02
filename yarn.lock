@@ -503,6 +503,7 @@ __metadata:
   resolution: "@tradeai/core@workspace:packages/core"
   dependencies:
     "@tradeai/database": "workspace:*"
+    technicalindicators: "npm:^3.1.0"
   languageName: unknown
   linkType: soft
 
@@ -549,6 +550,13 @@ __metadata:
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 10c0/a996a745e6c5d60292f36731dd41341339d4eeed8180bb09226e5c8d23759067692b1d88e5d91d72ee83dfc00d3aca8e7bd43ea120516c17922cbcb7c3e252db
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^6.0.96":
+  version: 6.14.13
+  resolution: "@types/node@npm:6.14.13"
+  checksum: 10c0/e1e06d8bd429c6e4ea6a34f87a690c4a7b86be07f09da05524a3b6df6a5d163e442d82d97c67b199a8005c52d6c14c05380d4592a55df7d787a6e51a19a0439e
   languageName: node
   linkType: hard
 
@@ -3596,6 +3604,15 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 10c0/6c4032340701a9950865f7ae8ef38578d8d7053f5e10518076e6554a9381fa91bd9c6850193695c141f32b21f979c985db07265a758867bac95de05f7d8aeb39
+  languageName: node
+  linkType: hard
+
+"technicalindicators@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "technicalindicators@npm:3.1.0"
+  dependencies:
+    "@types/node": "npm:^6.0.96"
+  checksum: 10c0/7119fde24b852a6c00301e2e2245ec02a8ab66932dff8bc0f5c1403406c0285f3b8567fd1ab1bbeacf795602a677f1be2b281da9e5ed4678ceaee56cae479fd5
   languageName: node
   linkType: hard
 
