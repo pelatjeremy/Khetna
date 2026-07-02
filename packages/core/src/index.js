@@ -7,3 +7,4 @@ export { SettingService } from './services/SettingService.js';
 export { TradeService } from './services/TradeService.js';
 export { UserService } from './services/UserService.js';
 export * from './engine/index.js';
+export * from './market/index.js';
