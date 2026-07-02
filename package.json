@@ -12,6 +12,7 @@
     "dev": "concurrently \"yarn dev:web\" \"yarn dev:api\"",
     "dev:web": "yarn workspace @tradeai/web dev",
     "dev:api": "yarn workspace @tradeai/api dev",
+    "build": "yarn workspace @tradeai/web build",
     "lint": "eslint .",
     "format": "prettier . --write",
     "prepare": "husky"
