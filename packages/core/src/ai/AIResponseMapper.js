@@ -4,6 +4,23 @@ export class AIResponseMapper {
       return null;
     }
 
+    if (typeof response.content === 'string' || response.success !== undefined) {
+      return {
+        summary: response.content ?? null,
+        observations: [],
+        risks: [],
+        opportunities: [],
+        confidence: null,
+        metadata: {
+          success: response.success ?? null,
+          provider: response.provider ?? null,
+          model: response.model ?? null,
+          error: response.error ?? null,
+        },
+        rawAIResponse: response,
+      };
+    }
+
     return {
       summary: response.content?.summary ?? null,
       observations: response.content?.observations ?? [],
