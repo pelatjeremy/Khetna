@@ -1,9 +1,9 @@
-import './globals.css';
+import '../styles/globals.css';
 import { Providers } from './providers';
 
 export const metadata = {
-  title: 'TradeAI',
-  description: 'Project foundation for TradeAI',
+  title: 'TradeAI Dashboard',
+  description: 'Mocked dashboard skeleton for TradeAI',
 };
 
 export default function RootLayout({ children }) {
