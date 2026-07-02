@@ -9,6 +9,7 @@ export { UserService } from './services/UserService.js';
 export * from './contracts/index.js';
 export * from './dto/index.js';
 export * from './ai/index.js';
+export * from './backtesting/index.js';
 export * from './engine/index.js';
 export * from './integration/index.js';
 export * from './market/index.js';
