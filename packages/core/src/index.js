@@ -14,6 +14,7 @@ export * from './engine/index.js';
 export * from './integration/index.js';
 export * from './market/index.js';
 export * from './notification/index.js';
+export * from './persistence/index.js';
 export * from './recommendation/index.js';
 export * from './scheduler/index.js';
 export * from './technical/index.js';
