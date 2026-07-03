@@ -1,8 +1,7 @@
 export class BacktestScenario {
-  constructor({ name = null, asset = null, period = null, recommendation = null } = {}) {
+  constructor({ name = 'default', description = null, sessions = [] } = {}) {
     this.name = name;
-    this.asset = asset;
-    this.period = period;
-    this.recommendation = recommendation;
+    this.description = description;
+    this.sessions = sessions;
   }
 }
