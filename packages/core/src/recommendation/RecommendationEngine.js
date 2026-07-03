@@ -13,13 +13,31 @@ export class RecommendationEngine {
     this.mapper = mapper;
   }
 
-  generate(input = {}) {
-    const scores = this.scoreAggregator.aggregate(input);
-    const rawRecommendation = this.builder.build({
-      ...input,
-      scores,
-    });
+  run(input = {}) {
+    return this.generate(input);
+  }
 
-    return this.mapper.toRecommendation(rawRecommendation);
+  generate(input = {}) {
+    let context = {};
+
+    try {
+      context = this.builder.build(input);
+      const scoreResult = this.scoreAggregator.calculate(context);
+
+      return this.mapper.toResult({
+        ...context,
+        score: scoreResult.score,
+        recommendation: scoreResult.recommendation,
+        confidence: scoreResult.confidence,
+        reasons: [...context.reasons, ...scoreResult.reasons],
+        warnings: [...context.warnings, ...scoreResult.warnings],
+        metadata: {
+          ...context.metadata,
+          scoreComponents: scoreResult.components,
+        },
+      });
+    } catch (error) {
+      return this.mapper.toError(error, context);
+    }
   }
 }
