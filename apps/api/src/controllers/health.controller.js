@@ -1,5 +1,7 @@
+import { sendSuccess } from './response.controller.js';
+
 export const getHealth = (_request, response) => {
-  response.status(200).json({
+  sendSuccess(response, {
     status: 'ok',
     service: 'tradeai-api',
   });

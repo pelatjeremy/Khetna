@@ -1,6 +1,8 @@
+import { sendSuccess } from './response.controller.js';
+
 export const getVersion = (_request, response) => {
-  response.status(200).json({
+  sendSuccess(response, {
     name: 'TradeAI API',
-    version: '1.0.0',
+    version: '2.0.0',
   });
 };
