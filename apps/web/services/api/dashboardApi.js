@@ -1,5 +1,5 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-const DASHBOARD_ENDPOINT = '/health';
+const DASHBOARD_ENDPOINT = '/dashboard';
 
 const buildDashboardUrl = () => {
   if (!API_URL) {
