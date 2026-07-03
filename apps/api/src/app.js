@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import analysisRoutes from './routes/analysis.routes.js';
+import dashboardRoutes from './routes/dashboard.routes.js';
 import healthRoutes from './routes/health.routes.js';
 import marketRoutes from './routes/market.routes.js';
 import portfolioRoutes from './routes/portfolio.routes.js';
@@ -14,6 +15,7 @@ export function createApp() {
 
   app.use(cors());
   app.use(express.json());
+  app.use('/dashboard', dashboardRoutes);
   app.use('/health', healthRoutes);
   app.use('/version', versionRoutes);
   app.use('/market', marketRoutes);
