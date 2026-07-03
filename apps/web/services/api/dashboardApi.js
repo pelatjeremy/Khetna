@@ -1,19 +1,26 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const DASHBOARD_ENDPOINT = '/health';
 
 const buildDashboardUrl = () => {
   if (!API_URL) {
-    return '/dashboard';
+    return DASHBOARD_ENDPOINT;
   }
 
-  return `${API_URL.replace(/\/$/, '')}/dashboard`;
+  return `${API_URL.replace(/\/$/, '')}${DASHBOARD_ENDPOINT}`;
 };
 
 export async function getDashboardData() {
-  const response = await fetch(buildDashboardUrl(), {
-    headers: {
-      Accept: 'application/json',
-    },
-  });
+  let response;
+
+  try {
+    response = await fetch(buildDashboardUrl(), {
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+  } catch (error) {
+    throw new Error(`Dashboard API unavailable: ${error.message}`);
+  }
 
   const payload = await response.json().catch(() => null);
 
