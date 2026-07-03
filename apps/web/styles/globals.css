@@ -80,6 +80,21 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.state-panel {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 24px;
+  color: #5b6472;
+}
+
+.error-panel {
+  border-color: #e8b4b4;
+  color: #8a2d2d;
+}
+
 .metric-card,
 .dashboard-card {
   border: 1px solid #d9dee7;
@@ -151,6 +166,18 @@ dt,
   margin: 0;
   font-weight: 700;
   text-align: right;
+  word-break: break-word;
+}
+
+.detail-list .detail-list {
+  margin-top: 8px;
+}
+
+.value-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .history-list {

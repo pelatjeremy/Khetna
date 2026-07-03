@@ -1,41 +1,47 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { getDashboardData } from '../services/api/dashboardApi.js';
 
 const initialState = {
-  summary: {
-    portfolioValue: '128 450 EUR',
-    dailyChange: '+1.8%',
-    openAnalyses: 4,
-    watchlistItems: 12,
-  },
-  portfolio: {
-    title: 'Portfolio',
-    allocation: 'Balanced growth',
-    exposure: '62% invested',
-    cash: '38% cash',
-  },
-  market: {
-    title: 'Market snapshot',
-    mood: 'Constructive',
-    trend: 'Major indexes are stable',
-    updatedAt: 'Mocked today',
-  },
-  recommendation: {
-    title: 'Current recommendation',
-    label: 'Hold position',
-    confidence: 'Medium',
-    note: 'Waiting for clearer signals before action.',
-  },
-  history: [
-    { id: 'analysis-1', title: 'Index review', status: 'Ready', date: '2026-07-01' },
-    { id: 'analysis-2', title: 'Portfolio balance', status: 'Draft', date: '2026-06-30' },
-    { id: 'analysis-3', title: 'Watchlist scan', status: 'Queued', date: '2026-06-29' },
-  ],
+  loading: false,
+  error: null,
+  data: null,
+  empty: false,
 };
+
+const isEmptyPayload = (payload) => {
+  if (!payload) return true;
+  if (Array.isArray(payload)) return payload.length === 0;
+  if (typeof payload === 'object') return Object.keys(payload).length === 0;
+  return false;
+};
+
+export const fetchDashboardData = createAsyncThunk('dashboard/fetchDashboardData', async () =>
+  getDashboardData(),
+);
 
 export const dashboardSlice = createSlice({
   name: 'dashboard',
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchDashboardData.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.empty = false;
+      })
+      .addCase(fetchDashboardData.fulfilled, (state, action) => {
+        state.loading = false;
+        state.data = action.payload;
+        state.empty = isEmptyPayload(action.payload);
+      })
+      .addCase(fetchDashboardData.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message ?? 'Dashboard API unavailable';
+        state.data = null;
+        state.empty = false;
+      });
+  },
 });
 
 export const dashboardReducer = dashboardSlice.reducer;

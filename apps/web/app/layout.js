@@ -3,7 +3,7 @@ import { Providers } from './providers';
 
 export const metadata = {
   title: 'TradeAI Dashboard',
-  description: 'Mocked dashboard skeleton for TradeAI',
+  description: 'Live dashboard for TradeAI',
 };
 
 export default function RootLayout({ children }) {
