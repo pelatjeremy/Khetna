@@ -38,7 +38,7 @@ Run:
 corepack yarn build
 ```
 
-The V1 build target validates the Next.js web application.
+The V2.0.0 release build target validates the Next.js web application.
 
 ## Production Mode
 

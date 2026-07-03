@@ -58,4 +58,4 @@ Pull requests should include:
 - screenshots only when UI behavior changed
 - linked ADR when architecture is affected
 
-For Sprint 19 release work, pull requests must not add product features or alter architecture.
+For Sprint V2-13 release work, pull requests must not add product features or alter architecture.

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document lists possible strategic evolution areas after the V1 release freeze. It is not a backlog, sprint plan, implementation plan, estimate, or V2 architecture.
+This document lists strategic context retained for the V2.0.0 release. It is not a backlog, sprint plan, implementation plan, estimate, or architecture change.
 
 ## Possible Evolution Areas
 
@@ -27,3 +27,4 @@ This roadmap intentionally excludes:
 - V2 architecture decisions
 - implementation details
 - committed feature scope
+- V3 scope

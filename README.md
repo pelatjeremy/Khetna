@@ -1,13 +1,13 @@
 # TradeAI
 
-TradeAI is a trading assistance platform built as a JavaScript monorepo. Release V1 freezes the current product and architecture state and focuses on publication readiness: documentation, reproducible installation, linting, formatting, build validation, and CI.
+TradeAI is a trading assistance platform built as a JavaScript monorepo. Release V2.0.0 freezes the current product and architecture state and focuses on publication readiness: documentation, reproducible installation, linting, formatting, build validation, and CI.
 
 ## Objectives
 
-- Provide a maintainable V1 baseline
+- Provide a maintainable V2.0.0 baseline
 - Keep frontend, backend, core, database, shared, and prompt concerns separated
 - Make local setup and release validation reproducible
-- Preserve the existing architecture without adding new functional scope during the V1 freeze
+- Preserve the existing architecture without adding new functional scope during the V2.0.0 freeze
 
 ## Architecture
 
@@ -130,6 +130,6 @@ TradeAI is distributed under the MIT License. See `LICENSE`.
 
 See `docs/release/CONTRIBUTING.md`.
 
-## Release V1
+## Release V2.0.0
 
-Release V1 is accepted when installation, lint, format, build, documentation, CI, and release checklist validation are complete. Sprint 19 does not add new features or change the architecture.
+Release V2.0.0 is accepted when installation, lint, format, build, documentation, CI, and release checklist validation are complete. Sprint V2-13 is a release-only stabilization sprint and does not add new features or change the architecture.

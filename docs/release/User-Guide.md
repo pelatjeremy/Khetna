@@ -4,7 +4,7 @@
 
 TradeAI is a trading assistance platform organized around a web dashboard, an API, a core application layer, and MongoDB persistence.
 
-The V1 release is a professional baseline. It documents the current system and makes it installable, runnable, and maintainable.
+The V2.0.0 release is a professional baseline. It documents the current system and makes it installable, runnable, and maintainable without adding new functional scope.
 
 ## Installation
 
@@ -64,9 +64,9 @@ corepack yarn dev:web
 - Database layer: `packages/database`
 - Documentation: `docs`
 
-## V1 Limitations
+## V2.0.0 Release Scope
 
-- V1 is a release freeze, not a new feature release.
-- The dashboard remains limited to the behavior implemented before Sprint 19.
-- No deployment automation is included in Sprint 19.
+- V2.0.0 is a release stabilization freeze, not a new feature release.
+- The dashboard remains limited to the behavior implemented before Sprint V2-13.
+- No deployment automation is introduced during Sprint V2-13.
 - Test structure is prepared, but no business tests are added during the freeze.

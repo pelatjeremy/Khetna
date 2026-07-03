@@ -59,11 +59,11 @@ corepack yarn format
 corepack yarn build
 ```
 
-The root build command validates the web application build, which is the available build target in V1.
+The root build command validates the web application build, which is the available build target for the V2.0.0 release baseline.
 
 ## Tests
 
-Sprint 19 prepares only the test folder structure:
+Sprint V2-13 keeps the existing test folder structure:
 
 ```txt
 tests/
@@ -71,11 +71,11 @@ tests/
   integration/
 ```
 
-Business tests are intentionally not added during the release freeze.
+Business tests are intentionally not added during the V2.0.0 release freeze.
 
 ## Adding a Module
 
-After V1, new modules should be introduced only with:
+After V2.0.0, new modules should be introduced only with:
 
 - clear ownership in the monorepo
 - matching documentation update
